@@ -565,3 +565,15 @@ pytest -q tests/test_codes.py::test_build_tracking_code_basic
 pip install pytest-cov
 pytest --cov=app --cov-report=term-missing
 ```
+
+## 15. Seed data (Populate DB with some records)
+
+### Run
+# from project root
+python -m scripts.seed_data           # populate once
+python -m scripts.seed_data --reset   # wipe tables then repopulate
+
+### What it creates
+- 3 customers
+- 5 parcels (mix of new, in_transit, out_for_delivery, delivered, return)
+- scans timeline pentru fiecare colet unde are sens
